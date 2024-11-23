@@ -12,35 +12,41 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/addbutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="+"
+        android:text="@string/btn_add"
         tools:layout_editor_absoluteX="143dp"
         tools:layout_editor_absoluteY="139dp"
         android:layout_weight="1"
+        android:layout_margin="3sp"
+        android:onClick="increase_Score"
         />
 
 
     <TextView
+        android:id="@+id/result"
         android:layout_width="match_parent"
-        android:text="0"
+        android:text="@string/string_default"
         android:textSize="108sp"
         android:textStyle="bold"
         android:background="#FFFF00"
         android:gravity="center"
         android:layout_height="wrap_content"
         android:layout_weight="8"
+        android:layout_margin="3sp"
         />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/subbutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="-"
+        android:text="@string/btn_minus"
         tools:layout_editor_absoluteX="151dp"
         tools:layout_editor_absoluteY="505dp"
         android:layout_weight="1"
+        android:layout_margin="3sp"
+        android:onClick="decrease_Score"
         />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
