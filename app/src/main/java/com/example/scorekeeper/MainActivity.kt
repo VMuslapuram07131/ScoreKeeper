@@ -25,6 +25,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         textView = findViewById(R.id.result)
+
+        if(savedInstanceState!=null && savedInstanceState.containsKey("COUNT")){
+            count = savedInstanceState.getInt("COUNT")
+            textView.text = count.toString()
+        }
     }
 
     fun decrease_Score(view: View)
@@ -38,5 +43,8 @@ class MainActivity : AppCompatActivity() {
         textView.setText(count.toString())
     }
 
-
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("COUNT", count)
+    }
 }
